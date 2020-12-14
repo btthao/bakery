@@ -336,8 +336,7 @@ a[href^=tel] {
     transition: all 0.3s;
 }
 
-.show .topic,
-.topic:hover {
+.show .topic {
     background: var(--primary4);
     color: var(--primary3);
 }
@@ -687,8 +686,6 @@ a[href^=tel] {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
     height: 100%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -807,7 +804,7 @@ a[href^=tel] {
     }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
     #home {
         background-attachment: fixed;
     }
@@ -869,14 +866,6 @@ a[href^=tel] {
         letter-spacing: 0.1rem;
     }
     #about-us {
-        display: -ms-grid;
-        display: grid;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        grid-gap: 3rem;
-    }
-    #aboutus-q {
         display: -ms-grid;
         display: grid;
         -webkit-box-pack: center;

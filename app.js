@@ -171,26 +171,39 @@ const prev = document.querySelector('.prev');
 const slider = document.getElementById('slider');
 const slides = document.querySelectorAll('.reviews-col');
 
-let i = 0;
+let i = 1;
+
+slider.style.transform = `translateX(-${i * (100 / slides.length)}%)`;
+slider.style.transition = 'none';
 
 
 next.addEventListener('click', function() {
+    if (i >= slides.length - 1) return;
     i++;
-    if (i == slides.length) {
-        i = 0;
-    };
+    slider.style.transition = '0.4s';
     slider.style.transform = `translateX(-${i * (100 / slides.length)}%)`;
 
 });
 
 prev.addEventListener('click', function() {
+    if (i <= 0) return;
     i--;
-    if (i < 0) {
-        i = slides.length - 1;
-    }
+    slider.style.transition = '0.4s';
     slider.style.transform = `translateX(-${i * (100 / slides.length)}%)`;
-
 });
+
+slider.addEventListener('transitionend', function() {
+    if (i == 0) {
+        slider.style.transition = 'none';
+        i = slides.length - 2;
+        slider.style.transform = `translateX(-${i * (100 / slides.length)}%)`;
+    };
+    if (i == slides.length - 1) {
+        slider.style.transition = 'none';
+        i = 1;
+        slider.style.transform = `translateX(-${i * (100 / slides.length)}%)`;
+    };
+})
 
 
 //smooth scroll 

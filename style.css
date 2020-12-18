@@ -823,6 +823,8 @@ a[href^=tel] {
         /* align-items: center; */
     }
     .nav-toggle {
+        border: none;
+        outline: none;
         display: block;
         font-size: 2rem;
         cursor: pointer;
@@ -852,6 +854,8 @@ a[href^=tel] {
         color: var(--primary2);
     }
     .x-btn {
+        border: none;
+        outline: none;
         display: block;
         width: 2rem;
         height: 2rem;
